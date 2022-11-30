@@ -1,6 +1,682 @@
-<html>
-  <head>
-    <title>Hey Hendra!</title>
-  </head>
-  <body><h1>Hey Hendra!</h1></body>
-</html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Hendra Setiawan.</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 700px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6f6d194f-7e22-4df1-bd74-59eb0490f47c" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="assets/1523939512417.jpeg"/></div><h1 class="page-title">Hendra Setiawan.</h1></header><div class="page-body"><div id="00fa8c1b-8720-461b-a762-583378a50b5a" class="column-list"><div id="47db0a88-c068-4f02-94e9-55970ccb1ce1" style="width:81.25%" class="column"><blockquote id="7050c32b-d588-4c51-aa0b-4ab802cf33bd" class="">I’m a <strong>WordPress Developer</strong> who’s passionate on building and customizing plugins &amp; themes that can helps people to grow their business.</blockquote><p id="a535ca29-61f0-4a61-9fde-bde21723a276" class="">I started my career as a full-time WordPress Developer in 2015.</p><p id="d0973caa-bd27-4b41-ae0a-e75736f7f840" class="">My basic programming knowledge is <code>PHP</code>, so WordPress is perfect to me. I love WordPress because it’s highly extendable, powerful and the community is awesome.</p><p id="668cb152-a5f6-4824-832e-45bcfb28ef2e" class=""><strong>Email :</strong> <strong>hendra@hey.com</strong></p></div><div id="ad9e372e-e927-4b9b-81fb-fba76ae79616" style="width:18.749999999999996%" class="column"><p id="aebe671c-023c-4b80-9943-cf45a8678cca" class="">🔗  <a href="https://www.linkedin.com/in/hendcorp/">LinkedIn</a></p><p id="d324df7d-3ad8-4f6f-a9e6-97f465935ca6" class="">🖥️  <a href="https://github.com/hendcorp">GitHub</a></p><p id="ba032714-ba7b-4c5d-9c2c-b7768e3bb1f9" class="">💼  <a href="https://www.upwork.com/freelancers/~014bc956c84e40aa51">Upwork</a></p><p id="ec6c2c4d-2f69-4b5d-b466-96ed9d7a0edd" class="">🥷🏻  <a href="https://profiles.wordpress.org/hendcorp/">WP.org</a></p></div></div><hr id="3dc2fd94-a65a-4630-8691-fe0748b2aa40"/><h2 id="7e98580c-31eb-4889-b1c8-a1ad20eff368" class=""><mark class="highlight-teal">🧪 Work Experiences</mark></h2><blockquote id="9c76c738-d10a-4a26-a939-ec293bcc44b8" class="">In the last 7 years, I’ve been working closely with awesome clients and agencies from various countries all around the world. The experience of collaborating with other developers, clients and leaders helps me to grow. </blockquote><p id="0693fc70-9dd9-4333-80fa-d222fb19b8bb" class="">
+</p><h3 id="13860889-8b31-499c-9c04-ebc359e72ce8" class="">🇺🇸 UX Studio</h3><p id="12a04877-841b-4d88-ba2f-ae8c93a483dc" class="">UX Studio is a full-service digital agency with a strong focus on user experience and digital marketing. My role in this company is as a WordPress Developer. I’m helping UX Studio building WordPress-based websites for their clients, developing custom plugins, customizing themes and do maintenance to make sure that every single websites are always working on its best performance.</p><p id="b677270d-e3a2-4f86-984d-07f2b19e67cc" class="">
+</p><figure id="75217ac6-dcb6-426d-b37e-679d2730a645" class="image"><a href="assets/Screen_Shot_2022-02-14_at_12.35.38.png"><img style="width:720px" src="assets/Screen_Shot_2022-02-14_at_12.35.38.png"/></a><figcaption>Source : <a href="https://www.linkedin.com/in/hendcorp/">LinkedIn Recommendation</a></figcaption></figure><p id="aac4a974-af9e-45a3-81c1-bf24fa673ec2" class="">
+</p><h3 id="ec4ba7fe-7a87-4f6e-a0ae-1155bd375ba7" class="">🇸🇬 Web Delegate</h3><p id="6b71644e-40f1-4077-b7f0-96c733938012" class="">Developing various WordPress projects from a company profile to eCommerce website (WooCommerce). My responsibility is to develop and make sure that the clients get a high quality website to grow their business.</p><p id="207194b3-00e0-47c1-89f2-1accd98c29e7" class="">
+</p><figure id="2ac1da7b-c345-4e5b-80e0-ec4436da8512" class="image"><a href="assets/Screen_Shot_2022-02-14_at_12.32.37.png"><img style="width:1526px" src="assets/Screen_Shot_2022-02-14_at_12.32.37.png"/></a><figcaption>Source : <a href="https://www.linkedin.com/in/hendcorp/">LinkedIn Recommendation</a></figcaption></figure><p id="8abdaea1-f9ff-46c9-887d-c2506308b306" class="">
+</p><h3 id="d2ee8460-5a73-46de-baf0-6aea04b50717" class="">🇦🇺 Exclusive Piano Group</h3><p id="ca0a1dc5-f7e4-45f4-a59a-775420f4a322" class="">Working as a WordPress developer on one of the biggest piano distributor in Australia, Exclusive Piano Group is the Australian National Distributor for Steinway &amp; Sons. My responsibility in this company is taking care of their websites (WordPress &amp; WooCommerce), email campaigns, server maintenance and developing custom features such as booking forms, SMS voting system, etc.</p><p id="4baaad9a-9df9-480a-aaaf-30fceda83864" class="">
+</p><figure id="2ce40296-bc6b-4d15-8ef3-790953f50328" class="image"><a href="assets/Screen_Shot_2022-02-14_at_11.19.54.png"><img style="width:1516px" src="assets/Screen_Shot_2022-02-14_at_11.19.54.png"/></a><figcaption>Source : <a href="https://www.linkedin.com/in/hendcorp/">LinkedIn Recommendation</a></figcaption></figure><p id="7877e1bb-5ada-41fa-9bac-fc001d43135d" class="">
+</p><h3 id="d4e73e56-a5da-424c-9841-bbbc1b7cf5ca" class="">💼 Freelancing on Upwork</h3><p id="7f3956c2-1ba5-4f98-b61a-5bf551745759" class="">Besides working on agencies and companies, I also actively working on some small-to-medium projects on <strong><mark class="highlight-teal"><a href="https://www.upwork.com/">Upwork</a></mark></strong>. I managed to maintain my <strong>Top Rated</strong> status for years with <strong>100% Job Success</strong> score. I always do my best to deliver the best quality products to my clients.</p><p id="552bcea2-c44d-4e3f-9687-7690db7a863a" class="">
+</p><figure id="b3aab74b-16e9-4259-a878-aa2ae876d763" class="image"><a href="assets/Screen_Shot_2022-02-14_at_13.20.28.png"><img style="width:1440px" src="assets/Screen_Shot_2022-02-14_at_13.20.28.png"/></a><figcaption>My Upwork Profile <a href="https://www.upwork.com/freelancers/~014bc956c84e40aa51">https://www.upwork.com/freelancers/~014bc956c84e40aa51</a></figcaption></figure><p id="1d3f48b8-c7de-4d3e-8071-d46f6e2803e7" class="">
+</p><blockquote id="a4f6b764-d72e-47e9-bc42-5e9ba0f286ca" class=""><strong>Some of my client’s review on Upwork </strong>⭐⭐⭐⭐⭐</blockquote><figure id="bb440781-d0f5-4bf1-9a24-492a087a6a87" class="image"><a href="assets/Untitled-2sss.png"><img style="width:1500px" src="assets/Untitled-2sss.png"/></a></figure><hr id="0f26d16a-66e1-4ba9-a194-9b371f381c47"/><p id="b19b4749-ba57-4777-9754-ac2d48eebdc5" class="">
+</p><h2 id="e25f7eb7-f062-4ca9-903f-48c46d73f8b8" class="">🧰<mark class="highlight-red"> Skills and Portfolios</mark></h2><blockquote id="f4da6ea0-ddae-4c48-a325-bc065805b7cb" class="">WordPress Development : Using hooks (actions &amp; filters) to manipulate the output. Never tweaks any plugins or themes directly, use hooks and child-theme instead. I’m familiar and pretty good at <code>PHP, CSS, React, jQuery, APIs and Ajax</code>.</blockquote><p id="3c3fbd85-bed6-4887-a8be-b75de6ec0407" class="">In my spare time, I also do some side-hustles and working on open-source plugins and published it on WordPress.org. My open-source plugins are <strong>NFT Gallery</strong> and <strong>WP Eventbrite Embedded Checkout</strong>.</p><p id="b88e93ee-ae7c-4bcf-8c81-b140fe7c00ce" class="">
+</p><figure id="dd2e8b10-139a-4fa9-9fb1-6290cac1a7b3" class="image"><a href="assets/Screen_Shot_2022-02-14_at_13.57.03.png"><img style="width:1886px" src="assets/Screen_Shot_2022-02-14_at_13.57.03.png"/></a></figure><blockquote id="724d41c3-9883-445f-a083-ec8eb0e1027d" class=""><strong>NFT Gallery</strong> is a WordPress plugin that helps you to add NFTs from <strong><mark class="highlight-blue"><a href="https://opensea.io/">OpenSea</a></mark></strong> to a WordPress website. You can sync NFTs from OpenSea to a WordPress site and show it on any posts or pages. This plugin is powered by OpenSea API.</blockquote><p id="a09d3217-149e-423e-9490-90473c2f793b" class="">📌  <mark class="highlight-red"><strong><a href="https://wordpress.org/plugins/nft-gallery/">View on WP.org</a></strong></mark></p><p id="2b04b36d-970c-4b3a-bf91-f398fd3f3e43" class="">
+</p><figure id="3ccc2719-0548-47cf-b3a9-16bc9fc07349" class="image"><a href="assets/Screen_Shot_2022-02-14_at_13.59.40.png"><img style="width:1884px" src="assets/Screen_Shot_2022-02-14_at_13.59.40.png"/></a></figure><blockquote id="7f61b7fa-3e35-4b90-8c43-8ec9f92bbd50" class=""><strong>WP Eventbrite Embedded Checkout</strong> is a WordPress plugin that allows people to buy <strong><mark class="highlight-orange"><a href="https://www.eventbrite.com/">Eventbrite</a></mark></strong> tickets without leaving your website. You can sell tickets directly from your WordPress site.</blockquote><p id="8a1e82d2-0346-4a05-8b62-cb5addda616b" class=""><strong>📌  </strong><mark class="highlight-red"><a href="https://wordpress.org/plugins/wp-eventbrite-embedded-checkout/"><strong>View on WP.org</strong></a></mark><strong> </strong>😎  <mark class="highlight-blue"><strong><a href="https://wpeec.pro/">Pro Version</a></strong></mark></p><p id="beb6215e-1da6-4c8a-9801-022548f7869c" class="">
+</p></div></article></body></html>
